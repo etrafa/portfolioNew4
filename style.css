@@ -1,0 +1,353 @@
+@font-face {
+  font-family: "Avenir Next";
+  /* src: url(./Metropolis/Metropolis-Black.otf);
+  src: url(./Metropolis/Metropolis-ExtraLight.otf);
+  src: url(./Metropolis/Metropolis-Light.otf);
+  src: url(./Metropolis/Metropolis-Medium.otf);
+  src: url(./Metropolis/Metropolis-SemiBold.otf);
+  src: url(./Metropolis/Metropolis-Thin.otf);
+  src: url(./Metropolis/Metropolis-Regular.otf);
+  src: url(./Metropolis/Metropolis-Bold.otf); */
+  src: url(./Metropolis/Metropolis-ExtraBold.otf);
+}
+
+@font-face {
+  font-family: "Avenir Next Regular";
+  src: url(./Metropolis/Metropolis-Regular.otf);
+}
+
+@font-face {
+  font-family: "Avenir Next Medium";
+  src: url(./Metropolis/Metropolis-Medium.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+.home {
+  width: 100%;
+  min-height: 100vh;
+  background: url(./asset/background.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 180vh;
+  filter: brightness(1.2);
+  filter: saturate(2);
+  position: relative;
+}
+
+.home h2 {
+  color: #e96f92;
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "Avenir Next", sans-serif, Helvetica;
+  display: flex;
+  justify-content: center;
+  z-index: 20000;
+}
+
+.home span {
+  color: #ffeddb;
+  font-size: 22px;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 0.4rem;
+  font-family: "Avenir Next", sans-serif, Helvetica;
+}
+
+.signature {
+  max-width: 25%;
+  height: auto;
+  display: block;
+  margin: 0.2rem auto;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 2rem;
+  font-family: "Avenir Next", sans-serif, Helvetica;
+}
+
+nav a {
+  color: #ffeddb !important;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:visited {
+  color: #ffeddb !important;
+}
+
+nav a:hover {
+  color: #e96f92 !important;
+}
+
+.balloon {
+  max-width: 20%;
+  height: auto;
+  position: absolute;
+  bottom: 5%;
+  left: 70%;
+  z-index: -1;
+  animation: ballonAnimation 40s linear infinite;
+  animation-fill-mode: forwards;
+}
+
+.balloon2 {
+  bottom: 5%;
+  left: -20%;
+  animation: ballonAnimation2 40s linear infinite;
+  animation-fill-mode: forwards;
+  animation-delay: 12s;
+}
+
+@keyframes ballonAnimation {
+  from {
+    bottom: 0%;
+  }
+  to {
+    bottom: 100%;
+  }
+}
+@keyframes ballonAnimation2 {
+  from {
+    bottom: 0%;
+    left: 10%;
+  }
+  to {
+    bottom: 100%;
+    left: 40%;
+  }
+}
+
+.star {
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  background-color: #ffeddb;
+  width: 15px;
+  height: 15px;
+  animation: starAnimation 2s infinite ease-in-out;
+  position: absolute;
+  top: 60%;
+  left: 17%;
+}
+
+.star1 {
+  top: 37%;
+  left: 5%;
+  animation-delay: 2s;
+}
+
+.star2 {
+  top: 40%;
+  left: 40%;
+  animation-delay: 1s;
+}
+
+.star3 {
+  top: 60%;
+  left: 90%;
+  animation-delay: 5s;
+}
+
+.star4 {
+  top: 10%;
+  left: 25%;
+  animation-delay: 4s;
+}
+.star5 {
+  top: 32%;
+  left: 80%;
+  animation-delay: 6s;
+}
+
+@keyframes starAnimation {
+  from {
+    opacity: 0;
+    filter: brightness(1);
+  }
+  to {
+    opacity: 1;
+    filter: brightness(4);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .home {
+    background: url(./asset/background.png);
+  }
+}
+
+.about,
+.work,
+.contact {
+  background-color: #ffeddb;
+  text-align: center;
+  font-family: "Avenir Next", sans-serif, Helvetica;
+  padding-top: 8rem;
+}
+
+.work,
+.contact {
+  padding-top: 4rem;
+}
+
+.about h2,
+.work h2,
+.contact h2 {
+  color: #1b2947;
+  font-size: 35px;
+}
+
+.about p {
+  font-size: 1.2em;
+  margin: 0.5em 0;
+  color: #1b2947;
+  line-height: 1.8;
+  font-family: "Avenir Next Regular", sans-serif, Helvetica;
+}
+
+.about hr,
+.work hr {
+  width: 70%;
+  margin: 0 auto;
+  border-color: #f6f6f6;
+  border-radius: 1px;
+}
+
+.works img {
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  border: 2px solid #1b2947;
+}
+
+.works h3 {
+  font-family: "Avenir Next", sans-serif, Helvetica;
+  color: #1b2947;
+  font-size: 35px;
+  margin-top: 1rem;
+}
+
+.works-button-container button {
+  background-color: #e96f92;
+  width: 110px;
+  height: 42px;
+  color: #ffeddb;
+  border: none;
+  margin: 1.4rem 10px;
+  font-family: "Avenir Next", sans-serif, Helvetica;
+  cursor: pointer;
+}
+
+.works-button-container button:hover {
+  background-color: #1b2947;
+  color: #e96f92;
+  transition: 0.4s linear;
+}
+
+.google-work,
+.spin-work,
+.travel-work,
+.tshirt-work,
+.weather-work {
+  margin-top: 4rem;
+}
+
+.email-container a,
+.social-media-container a {
+  text-decoration: none;
+  color: #1b2947;
+  font-size: 18px;
+  display: block;
+  margin-top: 1rem;
+}
+
+.email-me,
+.find-me {
+  font-size: 18px;
+  color: #1b2947;
+  margin-top: 2rem;
+}
+
+.email-container a strong,
+.social-media-container a strong {
+  color: #e96f92;
+  font-weight: bold;
+}
+
+.social-media-container {
+  margin-top: 2.4rem;
+}
+.footer-background {
+  width: 100%;
+  height: 10vh;
+  background: url(./asset/pyramid.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 2rem;
+}
+@media screen and (min-width: 900px) {
+  .signature {
+    max-width: 10%;
+  }
+  .home {
+    width: 100%;
+    min-height: 100vh;
+    background: url(./asset/background.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 180vh;
+    filter: brightness(1.2);
+    filter: saturate(2);
+    position: relative;
+  }
+  .google-work,
+  .spin-work,
+  .travel-work,
+  .tshirt-work,
+  .weather-work {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about hr,
+  .work hr {
+    width: 40%;
+    margin: 0 auto;
+    border-color: #f6f6f6;
+    border-radius: 1px;
+    display: block;
+    margin-top: 4rem;
+  }
+}
+
+.spin-work,
+.tshirt-work {
+  flex-direction: row-reverse;
+}
+
+@media screen and (min-width: 1446px) {
+  .home {
+    width: 100%;
+    background: url(./asset/background.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: cover;
+    filter: brightness(1.2);
+    filter: saturate(2);
+    position: relative;
+  }
+}
